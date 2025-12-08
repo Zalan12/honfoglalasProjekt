@@ -1,6 +1,7 @@
 export const enviroment = {
     production: false,
     serverUrl: "http://localhost:3000",
+    tokenName: "honfoglalas",
     currency: 'Ft',
     author:'Farkas & Rék Co.',
     email:'rokaestarsa@hon.hu',

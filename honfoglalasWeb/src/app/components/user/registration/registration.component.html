@@ -1,1 +1,21 @@
-<p>registration works!</p>
+<div class="col-sm-6 offset-sm-3">
+
+    <h3>Regisztráció</h3>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="nameReg" placeholder="name@example.com" name="newUser.name" [(ngModel)]="newUser.name">
+        <label for="nameReg">Felhasználónév: <em> *</em></label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="emailReg" placeholder="name@example.com" name="newUser.email" [(ngModel)]="newUser.email">
+        <label for="emailReg">Email address:  <em>*</em></label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="passwordReg" placeholder="Password" name="newUser.password" [(ngModel)]="newUser.password">
+        <label for="passwordReg">Password:  <em>*</em></label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="passwordConfReg" placeholder="Password" name="newUser.confirm" [(ngModel)]="newUser.confirm">
+        <label for="passwordConfReg">Confirm password:  <em>*</em></label>
+    </div>
+</div>
