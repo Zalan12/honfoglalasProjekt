@@ -13,5 +13,6 @@ import { MessageComponent } from './components/system/message/message.component'
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'honfoglalasWeb';
+  title = 'honfoglalasWeb'
+
 }
