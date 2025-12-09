@@ -1,17 +1,19 @@
 <div class="container">
-    <div class="card" style="width: 21%;" *ngFor="let accomm of pagedAccomm">
+    <div class="card" style="width: 21%;" *ngFor="let accomm of pagedAccomm; let i=index">
         <img src="http://localhost:3000/accommodation_images" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{accomm.name}}</h5>
           <p class="card-text"></p>
-          <a href="#" class="btn btn-primary">Ugrás az oldalra</a>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">További információ</a>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><i class="bi bi-geo-alt"></i> {{accomm.address}}</li>
           <li class="list-group-item" style="font-weight: bolder; font-size: larger;"><i class="bi bi-cash-coin"></i> {{accomm.basePrice}} {{currency}}</li>
           <li class="list-group-item"><i class="bi bi-people-fill"></i>: Max {{accomm.capacity}}</li>
-        </ul>
+        </ul> 
+        <div class="kor">{{accomm.id}}</div>
       </div>
+      
 
 </div>
 <nav aria-label="Page navigation example" *ngIf="totalPages > 1">
@@ -33,3 +35,24 @@
     </li>
   </ul>
 </nav>
+<!--Info modal-->
+<div class="modal fade" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="formModalLabel">{{pagedAccomm[0].name}}</h1>
+  
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégsem</button>
+        <button type="button" class="btn btn-success">Megerősítés</button>
+      </div>
+    </div>
+  </div>
+</div>

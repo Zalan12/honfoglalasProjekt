@@ -15,6 +15,5 @@ export class FooterComponent {
   phone=enviroment.phone;
   date=enviroment.date;
   author=enviroment.author;
-  repo=enviroment.repo;
-  jira=enviroment.jira;
+
 }
