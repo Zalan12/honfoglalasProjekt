@@ -54,6 +54,7 @@ export class RegistrationComponent {
                 "csapat" : "Pizzapityu"
         }}
         this.api.sendMail(data)
+        
         this.message.show('success','OK','Woohooo')
         this.router.navigate(['login'])
       }) 
