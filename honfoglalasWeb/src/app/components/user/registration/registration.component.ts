@@ -31,6 +31,7 @@ export class RegistrationComponent {
   ){}
 
   register(){
+    alert('a')
     if(!this.acceptTerms)
       {
         this.message.show('danger','Hiba','Nem fogadtad el a szabályzatot!')
@@ -54,7 +55,7 @@ export class RegistrationComponent {
                 "csapat" : "Pizzapityu"
         }}
         this.api.sendMail(data)
-        
+
         this.message.show('success','OK','Woohooo')
         this.router.navigate(['login'])
       }) 
