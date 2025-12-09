@@ -1,0 +1,11 @@
+.a{
+    background: radial-gradient(circle,rgba(54, 54, 54, 1) 0%, rgba(51, 51, 51, 1) 100%);
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+.shadow{
+    box-shadow: 10px 13px 19px 8px rgba(61,57,57,0.76) inset;
+-webkit-box-shadow: 10px 13px 19px 8px rgba(61,57,57,0.76) inset;
+-moz-box-shadow: 10px 13px 19px 8px rgba(61,57,57,0.76) inset;
+}

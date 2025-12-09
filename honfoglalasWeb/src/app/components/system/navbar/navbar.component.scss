@@ -1,6 +1,10 @@
 nav
 {
     margin-top: -8px;
+    background: radial-gradient(circle,rgba(54, 54, 54, 1) 4%, rgba(33, 27, 43, 1) 98%);
+
+    -webkit-box-shadow: 5px 5px 15px -2px #000000; 
+    box-shadow: 5px 5px 15px -2px #000000;
 }
 #fooldal{
     border-right: 1px,solid,#E2CAFF;
