@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { User } from '../../../interfaces/user';
 import { FormsModule } from '@angular/forms';
 import { MessageService } from '../../../services/message.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { APIservice } from '../../../services/api.service';
 
 @Component({
   selector: 'app-registration',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,RouterLink],
   templateUrl: './registration.component.html',
   styleUrl: './registration.component.scss'
 })
@@ -31,6 +31,7 @@ export class RegistrationComponent {
   ){}
 
   register(){
+    alert('a')
     if(!this.acceptTerms)
       {
         this.message.show('danger','Hiba','Nem fogadtad el a szabályzatot!')
@@ -54,7 +55,7 @@ export class RegistrationComponent {
                 "csapat" : "Pizzapityu"
         }}
         this.api.sendMail(data)
-        
+
         this.message.show('success','OK','Woohooo')
         this.router.navigate(['login'])
       }) 

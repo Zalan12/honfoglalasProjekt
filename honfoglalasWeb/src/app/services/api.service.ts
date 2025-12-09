@@ -60,4 +60,22 @@ export class APIservice{
           }
         }
       }
+      
+    async Login(table: string, data: any){
+        try{
+          const res = await axios.post(`${this.SERVER}/${table}/login` , data)
+        return {
+          status:200,
+          message: "A bejelentkezés sikeres",
+          data : res.data
+        }
+        }
+        catch (err : any){
+          return {
+            status:500,
+            message: err.response.data.error
+            
+          }
+        }
+      }  
 }
