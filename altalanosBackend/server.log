@@ -936,3 +936,7 @@
 [2025-12-09 11:24:10] [32minfo[39m:GET /accommodation_images - 0 record(s) Sent | 1ms
 [2025-12-09 11:25:24] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
 [2025-12-09 11:25:24] [32minfo[39m:GET /accommodation_images - 0 record(s) Sent | 1ms
+[2025-12-09 11:31:39] [32minfo[39m:POST /users/registration - 1 record(s) affected | 4ms
+[2025-12-09 11:33:18] [32minfo[39m:Server listening on http://localhost:3000
+[2025-12-09 11:33:23] [32minfo[39m:POST /users/registration - 1 record(s) affected | 13ms
+[2025-12-09 11:34:04] [32minfo[39m:Server listening on http://localhost:3000
