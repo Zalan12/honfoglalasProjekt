@@ -804,3 +804,54 @@
 [2025-11-19 12:07:42] [32minfo[39m:POST /users/registration - 1 record(s) affected | 2ms
 [2025-12-09 08:41:01] [32minfo[39m:Server listening on http://localhost:undefined
 [2025-12-09 09:04:15] [32minfo[39m:Server listening on http://localhost:undefined
+[2025-12-09 09:32:47] [32minfo[39m:Server listening on http://localhost:3000
+[2025-12-09 09:32:50] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 19ms
+[2025-12-09 09:34:56] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 4ms
+[2025-12-09 09:35:21] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 09:35:49] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 09:35:50] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 09:37:00] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 09:37:23] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 09:37:40] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2025-12-09 09:37:56] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 09:38:05] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 3ms
+[2025-12-09 09:38:58] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2025-12-09 09:39:35] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 09:52:53] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:02:40] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:02:45] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2025-12-09 10:02:58] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:03:19] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:04:26] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2025-12-09 10:05:02] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:05:05] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2025-12-09 10:05:06] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:05:15] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2025-12-09 10:05:18] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:05:21] [32minfo[39m:Server listening on http://localhost:3000
+[2025-12-09 10:05:53] [32minfo[39m:Server listening on http://localhost:3000
+[2025-12-09 10:05:54] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 20ms
+[2025-12-09 10:06:41] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 4ms
+[2025-12-09 10:06:49] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2025-12-09 10:07:18] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2025-12-09 10:13:28] [31merror[39m:[DB error]: ER_NO_SUCH_TABLE: Table '2025_honfoglalas.uploads' doesn't exist
+[2025-12-09 10:14:55] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2025-12-09 10:14:55] [31merror[39m:[DB error]: ER_NO_SUCH_TABLE: Table '2025_honfoglalas.images' doesn't exist
+[2025-12-09 10:14:57] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:14:57] [31merror[39m:[DB error]: ER_NO_SUCH_TABLE: Table '2025_honfoglalas.images' doesn't exist
+[2025-12-09 10:15:03] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:15:03] [31merror[39m:[DB error]: ER_NO_SUCH_TABLE: Table '2025_honfoglalas.images' doesn't exist
+[2025-12-09 10:15:44] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2025-12-09 10:15:44] [31merror[39m:[DB error]: ER_NO_SUCH_TABLE: Table '2025_honfoglalas.images' doesn't exist
+[2025-12-09 10:19:51] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:20:27] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:20:27] [32minfo[39m:GET /accommodation_images/hotel1.jpg - 0 record(s) Sent | 2ms
+[2025-12-09 10:21:22] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:21:22] [32minfo[39m:GET /accommodation_images - 2 record(s) Sent | 3ms
+[2025-12-09 10:22:33] [31merror[39m:[DB error]: ER_NO_SUCH_TABLE: Table '2025_honfoglalas.uploads' doesn't exist
+[2025-12-09 10:23:38] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:23:38] [32minfo[39m:GET /accommodation_images/hotel1.jpg - 0 record(s) Sent | 1ms
+[2025-12-09 10:24:00] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-09 10:24:00] [32minfo[39m:GET /accommodation_images - 2 record(s) Sent | 2ms
+[2025-12-09 10:24:06] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2025-12-09 10:24:06] [32minfo[39m:GET /accommodation_images - 2 record(s) Sent | 1ms

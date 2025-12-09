@@ -1,10 +1,10 @@
 <div class="container">
-    <div class="card" style="width: 21%;">
-        <img src="..." class="card-img-top" alt="...">
+    <div class="card" style="width: 21%;" *ngFor="let accomm of accomms">
+        <img src="http://localhost:3000/accommodation_images" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">{{accomm.name}}</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary">Ugrás az oldalra</a>
         </div>
       </div>
 </div>
