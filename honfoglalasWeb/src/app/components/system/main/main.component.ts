@@ -4,6 +4,8 @@ import { APIservice } from '../../../services/api.service';
 import { Accommodation } from '../../../interfaces/accommodation';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { enviroment } from '../../../../enviorments/enviorment';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-main',
@@ -16,6 +18,18 @@ export class MainComponent  implements OnInit{
 
   
   accomms:Accommodation[]=[]
+  
+
+  //Lapozásos miújságok----
+  currentPage = 1;
+  pageSize = 4;
+  totalPages = 1;
+  pagedAccomm:Accommodation[] = []
+  //-----------------------
+  
+
+
+  currency=enviroment.currency;
 
   constructor(
     private Api: APIservice,
@@ -28,7 +42,17 @@ ngOnInit(): void {
 getHotels(){
   this.Api.SelectAll('accommodations').then(res =>{
     this.accomms = res.data;
+    this.totalPages = Math.ceil(this.accomms.length/this.pageSize)
     console.log(this.accomms);
+    this.setPage(1)
   })
+}
+
+setPage(page:number){
+    
+  this.currentPage = page;
+  const startIndex = (page -1) * this.pageSize;
+  const endIndex = startIndex + this.pageSize;
+  this.pagedAccomm = this.accomms.slice(startIndex,endIndex)
 }
 }

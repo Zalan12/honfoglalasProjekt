@@ -14,5 +14,7 @@ export class FooterComponent {
   email=enviroment.email;
   phone=enviroment.phone;
   date=enviroment.date;
-  author=enviroment.author
+  author=enviroment.author;
+  repo=enviroment.repo;
+  jira=enviroment.jira;
 }
