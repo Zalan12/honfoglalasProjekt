@@ -5,12 +5,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item" *ngFor="let item of navItems">
-            <a class="nav-link active" aria-current="page" href="#">Bejelentkezés</a>
-          </li>
+        <ul class="navbar-nav" *ngFor="let item of navItems">
           <li class="nav-item">
-            <a class="nav-link" routerLink="">Regisztráció</a>
+            <a class="nav-link" aria-current="page" routerLink="{{item.url}}"><i class="bi {{item.icon}}"></i>{{item.name}}</a>
+            <span class="badge text-bg-danger">{{item.badge}}</span>
           </li>
         </ul>
       </div>
