@@ -2,6 +2,8 @@
 
     <h3>Regisztráció</h3>
 
+    <div class="RegDiv">
+    </div>
     <div class="form-floating mb-3">
         <input type="text" class="form-control" id="nameReg" placeholder="name@example.com" name="newUser.name" [(ngModel)]="newUser.name">
         <label for="nameReg">Felhasználónév: <em> *</em></label>
@@ -31,4 +33,4 @@
         <button class="mb-3 btn btn-success" (click)="register()">Register <i class="bi bi-pencil-square"></i></button>
         <button class="mb-3 btn btn-secondary" routerLink="login">Login <i class="bi bi-arrow-left-right"></i></button>
     </div>
-</div>
+    </div>

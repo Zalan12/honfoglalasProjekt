@@ -51,10 +51,10 @@ router.get('/:table/user/:userId', (req, res) => {
     o.created_at AS kelt,
     oi.quantity AS mennyiseg,
     p.description AS leiras
-FROM order_items oi
-JOIN orders o ON oi.order_id = o.id
-JOIN pizzas p ON oi.pizza_id = p.id
-WHERE o.user_id = ?`, [userId], (error, results) => {
+    FROM order_items oi
+    JOIN orders o ON oi.order_id = o.id
+    JOIN pizzas p ON oi.pizza_id = p.id
+    WHERE o.user_id = ?`, [userId], (error, results) => {
     if (error) return res.status(500).json({ errno: error.errno, msg: 'Baj van geco' });
     res.status(200).json(results);
   }, req);
