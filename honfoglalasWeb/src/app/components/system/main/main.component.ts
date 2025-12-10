@@ -28,6 +28,7 @@ export class MainComponent  implements OnInit{
   pagedAccomm:Accommodation[] = []
   //-----------------------
   
+  rand=Math.floor(Math.random() * 8) + 1;
 
 
   currency=enviroment.currency;
