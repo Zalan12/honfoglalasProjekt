@@ -78,4 +78,37 @@ export class APIservice{
           }
         }
       }  
+
+      async upload(formData:FormData): Promise<apiRES>{
+        try{
+          const res = await axios.post(`${this.SERVER}/upload`, formData)
+        return {
+          status:200,
+          data : res.data
+        }
+        }
+        catch (err : any){  
+          return {
+            status:500,
+            message: "Hiba történt az adatok lekéréskor"
+          }
+        }
+      }
+      
+      async Insert(table: string, data: any){
+        try{
+          const res = await axios.post(`${this.SERVER}/${table}`,data)
+        return {
+          status:200,
+          message: "Rekord felvéve",
+          data : res.data
+        }
+        }
+        catch (err : any){
+          return {
+            status:500,
+            message: "Hiba történt az adatok felvitelekor"
+          }
+        }
+      }
 }

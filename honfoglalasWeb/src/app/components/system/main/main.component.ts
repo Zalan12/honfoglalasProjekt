@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { enviroment } from '../../../../enviorments/enviorment';
 import { CurrencyPipe } from '@angular/common';
 import { AuthService } from '../../../services/auth.service';
+import { AccommodationImages } from '../../../interfaces/accommodation-images';
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-main',
@@ -17,9 +19,12 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class MainComponent  implements OnInit{
 
-  
+  selectedFile: File | null = null;
   accomms:Accommodation[]=[];
-
+  accomimgs: AccommodationImages[] = []
+  isAdmin = false
+  editmode = false;
+  newHotelM: any
 
   //Lapozásos miújságok---- freakster was freaking here 😜😜👅👅👅😛😛👅😜😜
   currentPage = 1;
@@ -28,7 +33,19 @@ export class MainComponent  implements OnInit{
   pagedAccomm:Accommodation[] = []
   //-----------------------
   
-
+  newaccomimg: AccommodationImages ={
+    accommodationId: 0,
+    imagePath: "",
+  }
+  newHotel:Accommodation = {
+    name:"",
+    descrip:"",
+    address:"",
+    capacity:0,
+    basePrice:0,
+    active:false,
+    createdAt:""
+  }
 
   currency=enviroment.currency;
 
@@ -39,7 +56,9 @@ export class MainComponent  implements OnInit{
   ){}
 
 ngOnInit(): void {
+  this.newHotelM = new bootstrap.Modal('#newHotelM')
   this.getHotels();
+  this.isAdmin = this.auth.isAdmin()
 }
 getHotels(){
   this.Api.SelectAll('accommodations').then(res =>{
@@ -57,4 +76,62 @@ setPage(page:number){
   const endIndex = startIndex + this.pageSize;
   this.pagedAccomm = this.accomms.slice(startIndex,endIndex)
 }
+onFileSelected(event:any){
+  this.selectedFile = event.target.files[0];
+  
 }
+
+
+async ujHotelFelvetele() {
+  if(!this.newHotel.name || !this.newHotel.address || !this.newHotel.basePrice || !this.newHotel.capacity){
+    this.mess.show('danger','Hiba','Nem adtál meg minden adatot!')
+    alert("Nem adtál meg minden adatot!")
+    return
+  }
+  if(this.selectedFile){
+    const formData = new FormData();
+    formData.append('image',this.selectedFile)
+    const res = await this.Api.upload(formData).then(res=>{
+      if(res.status != 200){
+        this.mess.show('danger','Hiba',res.message!)
+      }
+      else{
+        this.newaccomimg = res.data.filename;
+      }
+      
+    })
+  }
+
+  if(this.editmode){
+    //Ja
+  }
+  else{
+    this.Api.SelectAll('accommodations/name/eq/' + this.newHotel.name).then(res =>{  
+      this.Api.Insert('accommodations',this.newHotel).then(res => {
+        this.mess.show('success','Sikeres','A pizza sikeresen fel lett véve a listába!')
+        this.newHotelM.hide();
+        this.newHotel = 
+        {
+          id: 0,
+          name: "",
+          descrip: "",
+          address: "",
+          capacity: 0,
+          basePrice: 0,
+          active: false,
+          createdAt: ""
+        };
+        this.newaccomimg ={
+          id:0,
+          accommodationId : 0,
+          imagePath : ""
+        }
+        this.getHotels()
+      });
+
+    })
+  }
+
+}
+}
+
