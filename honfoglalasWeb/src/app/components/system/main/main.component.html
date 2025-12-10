@@ -1,6 +1,11 @@
 <h3>Szállások</h3>
 
 <hr>
+<div class="text-center">
+  <button  *ngIf="isAdmin" class="btn btn-primary btn-lg w-25 text-center" id="newHotelBTN" data-bs-toggle="modal" data-bs-target="#newHotelM">Új felvétele</button>
+</div>
+<hr *ngIf="isAdmin">
+
 <div id="carouselExampleFade" class="carousel slide carousel-fade w-75" data-bs-ride="carousel" >
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -72,7 +77,9 @@
       </a>
     </li>
   </ul>
+
 </nav>
+
 <!--Info modal-->
 <div class="modal fade" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -90,6 +97,53 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégsem</button>
         <button type="button" class="btn btn-success">Megerősítés</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--New hotel modal-->
+<div class="modal fade" id="newHotelM" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="newHotelMLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="newHotelMLabel">Új hotel felvétele</h1>
+  
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="newHotelName" placeholder="Név" [(ngModel)]="newHotel.name">
+        <label for="newHotelName">Név</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="newHotelAddress" placeholder="Cím" [(ngModel)]="newHotel.address">
+        <label for="newHotelAddress">Cím</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="number" min="1" class="form-control" id="newHotelCapcity" placeholder="Max. fő" [(ngModel)]="newHotel.capacity">
+        <label for="newHotelCapcity">Max. fő</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="number" min="0" class="form-control" id="newHotelBasePrice" placeholder="Ár" [(ngModel)]="newHotel.basePrice">
+        <label for="newHotelBasePrice">Ár</label>
+      </div>
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Fő kép a hotelről</label>
+        <input class="form-control" type="file" id="formFile" accept="image/*" (change)="onFileSelected($event)">
+      </div>
+      <div class="form-floating mb-3">
+        <input class="form-control textarea" id="newHotelDesc" placeholder="Leírás" [(ngModel)]="newHotel.descrip">
+        <label for="newHotelDesc">Leírás</label>
+      </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégsem</button>
+        <button type="button" class="btn btn-success" (click)="ujHotelFelvetele()">Megerősítés</button>
       </div>
     </div>
   </div>
