@@ -10,14 +10,14 @@ import { MessageService } from '../../../services/message.service';
   templateUrl: './logout.component.html',
   styleUrl: './logout.component.scss'
 })
-export class LogoutComponent  implements OnInit{
+export class LogoutComponent implements OnInit{
   constructor(
     private auth: AuthService,
     private router: Router,
     private message: MessageService
   ){}
 
-  ngOnInit(): void {
+  ngOnInit():void{
     this.auth.logout(),
     this.message.show('success','Ok','Sikeresen kijelentkeztél.')
     this.router.navigate(["/login"])

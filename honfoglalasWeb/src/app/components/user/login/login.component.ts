@@ -42,6 +42,7 @@ export class LoginComponent {
       }
 
       this.auth.login(JSON.stringify(res.data));
+      this.router.navigate(['/main'])
       alert("SIKERULT")
     })
   }

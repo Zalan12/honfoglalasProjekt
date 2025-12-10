@@ -1,4 +1,8 @@
+<h3>Szállások</h3>
+
+<hr>
 <div class="container">
+
     <div class="card" style="width: 21%;" *ngFor="let accomm of pagedAccomm">
         <img src="http://localhost:3000/accommodation_images" class="card-img-top" alt="...">
         <div class="card-body">
@@ -14,6 +18,7 @@
       </div>
 
 </div>
+<hr>
 <nav aria-label="Page navigation example" *ngIf="totalPages > 1">
   <ul class="pagination">
     <li class="page-item">
@@ -33,3 +38,4 @@
     </li>
   </ul>
 </nav>
+<button class="btn btn-primary btn-sm">Szállás fölvétele</button>

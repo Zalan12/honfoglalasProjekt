@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { enviroment } from '../../../../enviorments/enviorment';
 import { CurrencyPipe } from '@angular/common';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-main',
@@ -17,10 +18,10 @@ import { CurrencyPipe } from '@angular/common';
 export class MainComponent  implements OnInit{
 
   
-  accomms:Accommodation[]=[]
-  
+  accomms:Accommodation[]=[];
 
-  //Lapozásos miújságok----
+
+  //Lapozásos miújságok---- freakster was freaking here 😜😜👅👅👅😛😛👅😜😜
   currentPage = 1;
   pageSize = 4;
   totalPages = 1;
@@ -33,7 +34,8 @@ export class MainComponent  implements OnInit{
 
   constructor(
     private Api: APIservice,
-    private mess: MessageService
+    private mess: MessageService,
+    private auth: AuthService
   ){}
 
 ngOnInit(): void {

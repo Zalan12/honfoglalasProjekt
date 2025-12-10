@@ -8,7 +8,7 @@ import { MessageComponent } from './components/system/message/message.component'
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HeaderComponent,FooterComponent,NavbarComponent,MessageComponent],
+  imports: [RouterOutlet,HeaderComponent,FooterComponent,NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
