@@ -38,3 +38,9 @@ export class MessageComponent implements OnInit{
 
   }
 }
+
+//Vártalak 
+//Elhagytá'
+//Csengő
+//Zoliva
+//Megcsatá'

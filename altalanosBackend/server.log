@@ -1047,3 +1047,15 @@
 [2025-12-09 12:43:10] [32minfo[39m:GET /accommodation_images - 0 record(s) Sent | 1ms
 [2025-12-09 12:43:32] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
 [2025-12-09 12:43:32] [32minfo[39m:GET /accommodation_images - 0 record(s) Sent | 0ms
+[2025-12-09 12:46:17] [32minfo[39m:Server listening on http://localhost:3000
+[2025-12-10 08:05:28] [32minfo[39m:Server listening on http://localhost:3000
+[2025-12-10 08:06:59] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 11ms
+[2025-12-10 08:07:00] [32minfo[39m:GET /accommodation_images - 0 record(s) Sent | 2ms
+[2025-12-10 08:08:30] [32minfo[39m:GET /accommodation_images - 0 record(s) Sent | 1ms
+[2025-12-10 08:08:31] [32minfo[39m:GET /accommodation_images - 0 record(s) Sent | 2ms
+[2025-12-10 08:12:21] [32minfo[39m:POST /users/login - 1 record(s) affected | 1ms
+[2025-12-10 08:12:22] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2025-12-10 08:12:22] [32minfo[39m:GET /accommodation_images - 0 record(s) Sent | 1ms
+[2025-12-10 10:55:25] [32minfo[39m:Server listening on http://localhost:3000
+[2025-12-10 10:56:03] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 10ms
+[2025-12-10 10:56:03] [32minfo[39m:GET /accommodation_images - 0 record(s) Sent | 1ms
