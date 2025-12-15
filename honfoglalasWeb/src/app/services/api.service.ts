@@ -111,4 +111,21 @@ export class APIservice{
           }
         }
       }
+
+        // GET ONE record by id from table
+  async Select(table:string, id:number):Promise<apiRES>{
+    try{
+      const res = await axios.get(`${this.SERVER}/${table}/${id}`)
+    return {
+      status:200,
+      data : res.data
+    }
+    }
+    catch (err : any){
+      return {
+        status:500,
+        message: "Hiba történt az adatok lekéréskor"
+      }
+    }
+  }
 }

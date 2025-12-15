@@ -8,23 +8,27 @@ import { enviroment } from '../../../../enviorments/enviorment';
 import { CurrencyPipe } from '@angular/common';
 import { AuthService } from '../../../services/auth.service';
 import { AccommodationImages } from '../../../interfaces/accommodation-images';
+import { User } from '../../../interfaces/user';
+import { NumberFormatPipe } from '../../../pipes/number-format.pipe';
 declare var bootstrap: any;
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,NumberFormatPipe],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
 export class MainComponent  implements OnInit{
 
   selectedFile: File | null = null;
+  selectedUser: User | null = null
   accomms:Accommodation[]=[];
   accomimgs: AccommodationImages[] = []
   isAdmin = false
   editmode = false;
   newHotelM: any
+  formModal:any
 
   //Lapozásos miújságok---- freakster was freaking here 😜😜👅👅👅😛😛👅😜😜
   currentPage = 1;
@@ -56,6 +60,7 @@ export class MainComponent  implements OnInit{
   ){}
 
 ngOnInit(): void {
+  this.formModal = new bootstrap.Modal('#formModal')
   this.newHotelM = new bootstrap.Modal('#newHotelM')
   this.getHotels();
   this.isAdmin = this.auth.isAdmin()
@@ -67,6 +72,18 @@ getHotels(){
     console.log(this.accomms);
     this.setPage(1)
   })
+}
+getHotel(idx:any){
+ this.Api.Select('accommodations', idx).then(res =>{
+      this.newHotel  = res.data[0];
+      this.selectedUser = res.data[0]
+      this.Api.Select('accommodations/id/eq',idx).then(res=>{
+        this.accomms = res.data,
+        this.formModal.show()
+        console.log(this.newHotel) 
+      })
+    })
+    this.formModal.show()
 }
 
 setPage(page:number){

@@ -18,6 +18,10 @@
 
 }
 
+table{
+    width: 100%;
+}
+
 .card:hover
 {
     animation-name: forgat;
@@ -84,4 +88,13 @@
 
 .textarea{
     min-height: 250px;
+}
+
+#formModal{
+    width: 100%;
+}
+
+#HotelReszletImg{
+    width: 100%;
+    margin: 2%;
 }
