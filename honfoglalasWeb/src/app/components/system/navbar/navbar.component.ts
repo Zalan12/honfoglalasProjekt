@@ -94,6 +94,11 @@ export class NavbarComponent implements OnInit{
         icon: 'bi-box-arrow-in-right',
         url:'login'
       },
+      {
+        name: 'Profil',
+        icon: 'bi-people-fill',
+        url:'profile'
+      }
     ]
     ]
   }

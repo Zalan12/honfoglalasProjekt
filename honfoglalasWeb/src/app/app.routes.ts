@@ -5,9 +5,11 @@ import { MainComponent } from './components/system/main/main.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { LogoutComponent } from './components/user/logout/logout.component';
 import { CardviewComponent } from './components/system/cardview/cardview.component';
+import { UpdateprofileComponent } from './components/user/updateprofile/updateprofile.component';
 
 export const routes: Routes = [
     {path: 'registration', component:RegistrationComponent},
+    {path:'profile', component:UpdateprofileComponent},
     {path:'cardview',component:CardviewComponent},
     {path: 'login', component:LoginComponent},
     {path: 'logout', component:LogoutComponent},

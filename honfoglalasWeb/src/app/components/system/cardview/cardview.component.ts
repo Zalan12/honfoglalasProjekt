@@ -80,6 +80,16 @@ export class CardviewComponent {
 
       filterAccomms(){
       const term =this.searchTerm.toLowerCase().trim();
+      if(term=="67")
+      {
+         let hathet:any=document.getElementById('hathet');
+         hathet.style.display="block";
+      }
+      else
+        {
+          let hathet:any=document.getElementById('hathet');
+          hathet.style.display="none";
+        }
        this.filteredAccomms = this.accomms.filter(p => p.name.toLowerCase().includes(term) ||p.address?.toLowerCase().includes(term))
   }
 }

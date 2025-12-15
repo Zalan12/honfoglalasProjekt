@@ -5,6 +5,7 @@ import { User } from '../../../interfaces/user';
 import { APIservice } from '../../../services/api.service';
 import { AuthService } from '../../../services/auth.service';
 import { MessageService } from '../../../services/message.service';
+import { enviroment } from '../../../../enviorments/enviorment';
 
 @Component({
   selector: 'app-login',
@@ -43,7 +44,10 @@ export class LoginComponent {
 
       this.auth.login(JSON.stringify(res.data));
       this.router.navigate(['/main'])
-      alert("SIKERULT")
+      alert("SIKERULT");
+      localStorage.setItem("loggedUserId",res.data[0].id);
+      localStorage.setItem("loggedUserName",res.data[0].name)
+      
     })
   }
 }
