@@ -1,0 +1,67 @@
+.container{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card
+{
+    margin: 10px;
+    -webkit-box-shadow: 3px 19px 19px 2px rgba(0,0,0,0.82); 
+    box-shadow: 3px 19px 19px 2px rgba(0,0,0,0.82);
+    animation-name: vForgat;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    
+
+}
+
+.card:hover
+{
+    animation-name: forgat;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    
+
+}
+
+#nincsHely{
+    filter: blur(50px);
+    filter: grayscale(100%);
+}
+
+.kor
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #d2afe3;
+    background: linear-gradient(90deg, rgba(210, 175, 227, 1) 0%, rgba(255, 245, 219, 1) 100%);
+    text-align: center;
+    color: black;
+    font-size: x-large;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    box-shadow: 3px -3px 2px rgba(34,34,34,0.4);
+}
+
+#kereses{
+    justify-content:flex-end;
+}
+
+@keyframes forgat 
+{
+    0%{rotate: 0deg; filter: brightness(100%);}
+    100%{rotate: 2deg; filter: brightness(130%);}
+
+}
+
+@keyframes vForgat 
+{
+    0%{rotate: 2deg;filter: brightness(130%);}
+    100%{rotate: 0deg;filter: brightness(100%);}
+
+}

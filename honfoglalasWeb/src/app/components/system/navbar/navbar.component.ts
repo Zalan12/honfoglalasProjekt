@@ -47,9 +47,9 @@ export class NavbarComponent implements OnInit{
       },
       ...(this.isAdmin) ? [
         {
-          name: 'Pizzák kezelése',
+          name: 'Szállásaink',
           icon: 'bi-database',
-          url:'pizzas'
+          url:'cardview'
         },
         {
           name: 'Felhasználók kezelése',
