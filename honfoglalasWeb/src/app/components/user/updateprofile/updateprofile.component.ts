@@ -45,6 +45,7 @@ user: User ={
         return
       }
       this.user=res.data;
+      console.log(this.user)
     })
   }
 }
