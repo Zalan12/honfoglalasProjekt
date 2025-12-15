@@ -13,7 +13,7 @@
         <div class="card-body">
           <h5 class="card-title">{{accomm.name}}</h5>
           <p class="card-text"></p>
-          <a href="#" *ngIf="accomm.active==true" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">További információ</a>
+          <button *ngIf="accomm.active==true" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#infoModal" (click)="getHotel(accomm.id)">További információ <i class="bi bi-info-circle-fill"></i></button>
           <a href="#" *ngIf="accomm.active==false" class="btn btn-danger  disabled" data-bs-toggle="modal" data-bs-target="#formModal" aria-disabled="true">Nincsen szabad szállás</a>
         </div>
         <ul class="list-group list-group-flush">
@@ -46,3 +46,47 @@
   </ul>
 
 </nav>
+
+<!--Info modal-->
+<div class="modal fade modal-lg" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="formModalLabel">{{accomms[0].name}}</h1>
+  
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <img src="hotel{{accomms[0].id}}.jpg" class="rounded mx-auto d-block" id="HotelReszletImg" alt="...">
+        <table class="table table-hover table-striped-columns">
+          <thead>
+            <tr>
+              <th class="text-end">#</th>
+              <th class="text-end">Név</th>
+              <th class="text-end">Cím</th>
+              <th class="text-end">MAX. Fő</th>
+              <th class="text-end">Alap ár</th>
+              <th class="text-end">Aktív?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let accomm of accomms; let i = index">
+              <td class="text-end">{{accomm.id}}</td>
+              <td class="text-end">{{accomm.name}}</td>
+              <td class="text-end">{{accomm.address}}</td>
+              <td class="text-end">{{accomm.capacity}}</td>
+              <td class="text-end">{{accomm.basePrice | numberFormat}} {{currency}}</td>
+              <td class="text-end">{{accomm.active ? "Aktív" : "Inaktív"}}</td>   
+            </tr>
+          </tbody>
+          
+        </table>
+        <p>{{accomms[0].descrip}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="getHotels()">Mégsem</button>
+        <button type="button" class="btn btn-success">Megerősítés</button>
+      </div>
+    </div>
+  </div>
+</div>

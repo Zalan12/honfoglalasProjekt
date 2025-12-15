@@ -7,22 +7,26 @@ import { enviroment } from '../../../../enviorments/enviorment';
 import { APIservice } from '../../../services/api.service';
 import { MessageService } from '../../../services/message.service';
 import { AuthService } from '../../../services/auth.service';
+import { User } from '../../../interfaces/user';
+import { NumberFormatPipe } from '../../../pipes/number-format.pipe';
 declare var bootstrap: any;
 
 @Component({
   selector: 'app-cardview',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule, NumberFormatPipe],
   templateUrl: './cardview.component.html',
   styleUrl: './cardview.component.scss'
 })
 export class CardviewComponent {
-  selectedFile: File | null = null;
+    selectedUser: User | null = null
+    selectedFile: File | null = null;
     accomms:Accommodation[]=[];
     accomimgs: AccommodationImages[] = []
     isAdmin = false
     editmode = false;
     newHotelM: any
+    formModal2:any
   
     //Lapozásos miújságok---- freakster was freaking here 😜😜👅👅👅😛😛👅😜😜
     currentPage = 1;
@@ -57,6 +61,7 @@ export class CardviewComponent {
       ){}
     
     ngOnInit(): void {
+      this.formModal2 = new bootstrap.Modal('#formModal')
       this.getHotels();
       this.isAdmin = this.auth.isAdmin()
     }
@@ -68,6 +73,18 @@ export class CardviewComponent {
         this.filteredAccomms = this.accomms
         this.setPage(1)
       })
+    }
+    getHotel(idx:any){
+    this.Api.Select('accommodations', idx).then(res =>{
+      this.newHotel  = res.data[0];
+      this.selectedUser = res.data[0]
+      this.Api.Select('accommodations/id/eq',idx).then(res=>{
+        this.accomms = res.data,
+        this.formModal2.show()
+        console.log(this.newHotel) 
+          })
+      })
+      this.formModal2.show()
     }
     
     setPage(page:number){
