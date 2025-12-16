@@ -193,6 +193,31 @@ router.patch('/:table/:id', (req, res) => {
   }, req)
 })
 
+// Delete one record by id
+router.delete('/:table/:id', (req, res) => {
+  const table = req.params.table;
+  const id = req.params.id;
+
+  if (!id) {
+    return res.status(400).json({ msg: 'Hiányzik az id paraméter!' });
+  }
+
+  const sql = `DELETE FROM ${table} WHERE id = ?`;
+
+  query(sql, [id], (error, results) => {
+    if (error) {
+      logger.error(error);
+      return res.status(500).json({ errno: error.errno, msg: 'Baj van geco' });
+    }
+
+    if (results.affectedRows === 0) {
+      return res.status(404).json({ msg: 'Nem található ilyen rekord.' });
+    }
+
+    res.status(200).json({ msg: 'Sikeresen törölve!' });
+  }, req);
+});
+
 
 /*
     //insert one record to table
@@ -220,30 +245,6 @@ router.post('/:table', (req, res) => {
   }, req);
 });
 
-// Delete one record by id
-router.delete('/:table/:id', (req, res) => {
-  const table = req.params.table;
-  const id = req.params.id;
-
-  if (!id) {
-    return res.status(400).json({ msg: 'Hiányzik az id paraméter!' });
-  }
-
-  const sql = `DELETE FROM ${table} WHERE id = ?`;
-
-  query(sql, [id], (error, results) => {
-    if (error) {
-      logger.error(error);
-      return res.status(500).json({ errno: error.errno, msg: 'Baj van geco' });
-    }
-
-    if (results.affectedRows === 0) {
-      return res.status(404).json({ msg: 'Nem található ilyen rekord.' });
-    }
-
-    res.status(200).json({ msg: 'Sikeresen törölve!' });
-  }, req);
-});
 
 
 // Update (partial) record by id

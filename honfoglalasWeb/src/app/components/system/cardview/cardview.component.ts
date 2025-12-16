@@ -33,7 +33,8 @@ export class CardviewComponent {
     pageSize = 8;
     totalPages = 1;
     pagedAccomm:Accommodation[] = []
-    filteredAccomms:Accommodation[] = []
+    filteredAccomms:Accommodation[] = [];
+    torlendo=0;
      searchTerm:string = ""
     //-----------------------
     
@@ -113,5 +114,19 @@ export class CardviewComponent {
        {
         this.setPage(1);
        }
+  }
+
+  deleteAccom(id:any)
+  {
+      this.Api.Delete("accommodations",id).then(res=>{
+
+        this.mess.show('success','Siker','Sikeres törlés');
+      })
+      this.setPage(1);
+  }
+
+  getDeleteId(id:any)
+  {
+     this.torlendo=id;
   }
 }

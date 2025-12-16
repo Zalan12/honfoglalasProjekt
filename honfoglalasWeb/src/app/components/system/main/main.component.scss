@@ -31,6 +31,50 @@ table{
 
 }
 
+.hirKep1
+{
+    width: 230px;
+    height: 450px;
+    position: absolute;
+    left: 0;
+    box-shadow: 3px 4px 2px rgba(34,34,34,0.7);
+    border: 1px, white, solid;
+
+}
+
+
+
+.hirKep2
+{
+    width: 230px;
+    height: 450px;
+    position: absolute;
+    right: 0;
+    box-shadow: 3px 4px 2px rgba(34,34,34,0.7);
+    border: 1px, white, solid;
+
+}
+
+.hirKep1:hover,.hirKep2:hover
+{
+        animation-name: freaky;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.hirdetes1{
+    position: relative;
+    width: 50px;
+    height: 10px;
+    background-color: rgb(122, 122, 122);
+    border-radius: 1px;
+    top: 0px;
+    left: -60px;
+    font-size: xx-small;
+    text-align: center;
+}
+
+
 
 .kor
 {
@@ -80,6 +124,13 @@ table{
     0%{rotate: 2deg;filter: brightness(130%);}
     100%{rotate: 0deg;filter: brightness(100%);}
 
+}
+
+@keyframes freaky
+{
+    0%{filter: blur(0px) grayscale(0%);}
+    50%{filter: blur(10px) grayscale(100%) brightness(200%);}
+    100%{filter: blur(0px) grayscale(0%);}
 }
 
 #newHotelBTN{

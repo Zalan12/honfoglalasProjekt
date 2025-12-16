@@ -128,4 +128,37 @@ export class APIservice{
       }
     }
   }
+
+   async Update(table: string, id : number, data: any){
+    try{
+      const res = await axios.patch(`${this.SERVER}/${table}/${id}` , data)
+    return {
+      status:200,
+      message: "Rekord módosítva",
+      data : res.data
+    }
+    }
+    catch (err : any){
+      return {
+        status:500,
+        message: "Hiba történt az adatok módosításakor"
+      }
+    }
+  }
+
+  async Delete(table: string, id:number):Promise<apiRES>{
+    try{
+      const res = await axios.delete(`${this.SERVER}/${table}/${id}`)
+    return {
+      status:200,
+      message: "Belo"
+    }
+    }
+    catch (err : any){
+      return {
+        status:500,
+        message: "Hiba történt az adatok lekéréskor"
+      }
+    }
+  }
 }
