@@ -7,7 +7,7 @@
 <div class="container">
 
 
-    <div class="card" style="width: 21%;" *ngFor="let accomm of filteredAccomms; let i=index">
+    <div class="card" style="width: 21%;" *ngFor="let accomm of pagedAccomm; let i=index">
         <img *ngIf="accomm.active==true" src="hotel{{accomm.id}}.jpg" class="card-img-top" alt="Hotel{{accomm.id}}">
         <img *ngIf="accomm.active==false" src="hotel{{accomm.id}}.jpg" class="card-img-top" alt="Hotel{{accomm.id}}" id="nincsHely">
         <div class="card-body">

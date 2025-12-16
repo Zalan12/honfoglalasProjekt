@@ -108,5 +108,10 @@ export class CardviewComponent {
           hathet.style.display="none";
         }
        this.filteredAccomms = this.accomms.filter(p => p.name.toLowerCase().includes(term) ||p.address?.toLowerCase().includes(term))
+       this.pagedAccomm=this.filteredAccomms;
+       if(term=="")
+       {
+        this.setPage(1);
+       }
   }
 }
