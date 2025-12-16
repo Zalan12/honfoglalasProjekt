@@ -6,6 +6,7 @@ import { AuthService } from '../../../services/auth.service';
 import { APIservice } from '../../../services/api.service';
 import { MessageService } from '../../../services/message.service';
 import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
 import { User } from '../../../interfaces/user';
 
 @Component({
@@ -23,29 +24,26 @@ export class UpdateprofileComponent implements OnInit{
       private message: MessageService,
       private router: Router
     ){}
-  
-user: User ={
-    name: '',
-    email: '',
-    password: '',
-    confirm: '',
-    role: '',
-    createdAt: new Date()
-  }
+  email: string="";
+  name:string="";
+  createdAt:string="";
 
   ngOnInit(): void {
     this.getProfile(Number(localStorage.getItem("loggedUserId")));
   }
 
-  getProfile(id:number)
+ getProfile(id:number)
   {
     this.api.Select('users',id).then(res=>{
       if(res.status == 500){
         this.message.show('danger','Hiba',"Hiba van a rendszerben")
         return
       }
-      this.user=res.data;
-      console.log(this.user)
+      this.email=res.data[0].email;
+      this.name=res.data[0].name;
+      this.createdAt=res.data[0].createdAt;
+
+      
     })
   }
 }

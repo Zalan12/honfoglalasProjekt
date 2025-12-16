@@ -2,15 +2,21 @@
 <hr>
 <div class="col-sm-6 offset-sm-3">
 <div class="form-floating mb-3">
-  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="{{email}}">
   <label for="floatingInput">Email-cím módosítása</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-  <label for="floatingPassword">Jelszó módosítása</label>
+  <input type="text" class="form-control" id="floatingName" placeholder="Name" value="{{name}}">
+  <label for="floatingName">Név módosítása</label>
 </div>
+<hr>
 <div class="form-floating mb-3">
-  <input type="text" class="form-control" id="createdAt" placeholder="Password" disabled [(ngModel)]="user.createdAt">
-  <label for="floatingPassword">Létrehozás dátuma</label>
+  <input type="text" class="form-control" id="createdAt" placeholder="Password" disabled value="{{createdAt | date}}">
+  <label for="floatingPassword">Létrehozás dátuma:</label>
+</div>
+
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="createdAt" placeholder="Password" disabled value="{{createdAt | date}}">
+  <label for="floatingPassword">Utolsó bejelentkezés dátuma:</label>
 </div>
 </div>

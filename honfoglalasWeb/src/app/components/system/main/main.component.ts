@@ -150,5 +150,10 @@ async ujHotelFelvetele() {
   }
 
 }
+
+bezar(){
+  let reklam=document.getElementById("hirKep3");
+  reklam?.classList.add("d-none");
+}
 }
 
