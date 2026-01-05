@@ -21,7 +21,8 @@ export class LoginComponent {
     password: '',
     confirm: '',
     role: 'user',
-    createdAt: new Date()
+    createdAt: new Date(),
+    latestLogin:new Date()
   }
   rememberMe : boolean = false;
 

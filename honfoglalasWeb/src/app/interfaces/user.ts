@@ -3,7 +3,8 @@ export interface User{
     name: string,
     email: string,
     password: string,
-    confirm: string,
+    confirm?: string,
     role: string,
-    createdAt: Date
+    createdAt: Date,
+    latestLogin:Date
 }

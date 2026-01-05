@@ -24,9 +24,15 @@ export class UpdateprofileComponent implements OnInit{
       private message: MessageService,
       private router: Router
     ){}
-  email: string="";
-  name:string="";
-  createdAt:string="";
+  user: User ={
+    name: '',
+    email: '',
+    password: '',
+    role: 'user',
+    createdAt: new Date(),
+    latestLogin:new Date()
+  }
+
 
   ngOnInit(): void {
     this.getProfile(Number(localStorage.getItem("loggedUserId")));
@@ -39,11 +45,24 @@ export class UpdateprofileComponent implements OnInit{
         this.message.show('danger','Hiba',"Hiba van a rendszerben")
         return
       }
-      this.email=res.data[0].email;
-      this.name=res.data[0].name;
-      this.createdAt=res.data[0].createdAt;
+        this.user=res.data[0];
+        
 
       
     })
   }
+  modProfile()
+  {
+    this.api.Update("users",Number(localStorage.getItem("loggedUserId")), this.user).then(res=>{
+      if(res.status == 500){
+        this.message.show('danger','Hiba',"Hiba van a rendszerben")
+        return
+      }
+      if(res.status==200)
+      {
+        this.message.show('success','Siker!','Sikeres adat módosítás')
+      }
+  
+  })
+}
 }

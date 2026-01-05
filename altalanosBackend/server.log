@@ -2103,3 +2103,72 @@
 [2026-01-05 08:26:59] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
 [2026-01-05 08:27:03] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
 [2026-01-05 08:27:39] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 08:32:35] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 08:34:17] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 08:34:22] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 08:34:22] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 08:34:23] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 08:35:07] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 08:35:19] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 08:35:20] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 08:35:21] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 08:35:48] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 08:37:28] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 08:37:42] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 08:38:09] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 08:38:40] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 08:38:46] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 08:39:01] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 08:40:11] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 08:40:45] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 08:42:16] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 08:42:34] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 08:44:18] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:04:59] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 09:05:07] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:17:27] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:17:27] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:17:28] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 09:18:29] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 09:20:49] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 09:20:51] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 09:20:54] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 09:20:54] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:20:54] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:20:54] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:20:55] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:22:18] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 09:22:26] [31merror[39m:[DB error]: ER_BAD_FIELD_ERROR: Unknown column 'confirm' in 'field list'
+[2026-01-05 09:22:31] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 09:22:34] [31merror[39m:[DB error]: ER_BAD_FIELD_ERROR: Unknown column 'confirm' in 'field list'
+[2026-01-05 09:22:51] [31merror[39m:[DB error]: ER_BAD_FIELD_ERROR: Unknown column 'confirm' in 'field list'
+[2026-01-05 09:24:40] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:24:47] [31merror[39m:[DB error]: ER_BAD_FIELD_ERROR: Unknown column 'confirm' in 'field list'
+[2026-01-05 09:25:10] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:25:17] [32minfo[39m:PATCH /users/31 - 1 record(s) affected | 4ms
+[2026-01-05 09:25:19] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:27:07] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:27:17] [32minfo[39m:POST /users/login - 0 record(s) affected | 0ms
+[2026-01-05 09:27:45] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-05 09:27:47] [32minfo[39m:POST /users/login - 0 record(s) affected | 9ms
+[2026-01-05 09:29:00] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-05 09:29:02] [32minfo[39m:POST /users/login - 1 record(s) affected | 9ms
+[2026-01-05 09:29:03] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2026-01-05 09:29:32] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 0ms
+[2026-01-05 09:29:38] [32minfo[39m:POST /users/login - 1 record(s) affected | 2ms
+[2026-01-05 09:29:39] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2026-01-05 09:29:42] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 09:30:43] [32minfo[39m:PATCH /users/31 - 1 record(s) affected | 2ms
+[2026-01-05 09:30:45] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-05 09:31:47] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:31:52] [32minfo[39m:PATCH /users/31 - 1 record(s) affected | 3ms
+[2026-01-05 09:31:54] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:32:15] [32minfo[39m:PATCH /users/31 - 1 record(s) affected | 4ms
+[2026-01-05 09:32:45] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:36:10] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:36:53] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:37:41] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:38:24] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:38:35] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:40:25] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 09:55:13] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
