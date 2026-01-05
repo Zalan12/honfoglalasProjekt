@@ -2055,3 +2055,51 @@
 [2025-12-16 12:22:41] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 1ms
 [2025-12-16 12:29:22] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 1ms
 [2025-12-16 12:45:49] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 1ms
+[2025-12-17 08:08:52] [32minfo[39m:Server listening on http://localhost:3000
+[2025-12-17 08:09:17] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 20ms
+[2025-12-17 08:10:31] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 2ms
+[2025-12-17 08:12:52] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 0ms
+[2025-12-17 08:14:09] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 1ms
+[2025-12-17 08:14:24] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 0ms
+[2025-12-17 08:14:59] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 1ms
+[2025-12-17 08:15:14] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 1ms
+[2025-12-17 08:15:31] [32minfo[39m:POST /users/login - 1 record(s) affected | 13ms
+[2025-12-17 08:15:32] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 1ms
+[2025-12-17 08:15:35] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2025-12-17 08:15:39] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 1ms
+[2025-12-17 08:15:43] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 1ms
+[2025-12-17 08:15:44] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 0ms
+[2025-12-17 08:16:52] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2025-12-17 08:17:00] [32minfo[39m:GET /accommodations - 7 record(s) Sent | 0ms
+[2025-12-17 08:17:05] [32minfo[39m:DELETE /accommodations/1 - 1 record(s) affected | 3ms
+[2025-12-17 08:17:16] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2025-12-17 08:19:38] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2025-12-17 08:19:48] [32minfo[39m:GET /accommodations/3 - 1 record(s) Sent | 1ms
+[2025-12-17 08:19:48] [32minfo[39m:GET /accommodations/id/eq/3 - 1 record(s) Sent | 1ms
+[2025-12-17 08:19:54] [32minfo[39m:GET /accommodations/6 - 1 record(s) Sent | 2ms
+[2025-12-17 08:19:54] [32minfo[39m:GET /accommodations/id/eq/6 - 1 record(s) Sent | 0ms
+[2025-12-17 08:19:56] [32minfo[39m:GET /accommodations/7 - 1 record(s) Sent | 2ms
+[2025-12-17 08:19:56] [32minfo[39m:GET /accommodations/id/eq/7 - 1 record(s) Sent | 0ms
+[2025-12-17 08:20:19] [32minfo[39m:GET /accommodations/3 - 1 record(s) Sent | 1ms
+[2025-12-17 08:20:19] [32minfo[39m:GET /accommodations/id/eq/3 - 1 record(s) Sent | 0ms
+[2025-12-17 08:23:16] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-05 08:13:02] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-05 08:13:25] [31merror[39m:[DB error]: connect ECONNREFUSED ::1:3306
+[2026-01-05 08:13:42] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 37ms
+[2026-01-05 08:15:56] [32minfo[39m:POST /users/login - 1 record(s) affected | 4ms
+[2026-01-05 08:15:57] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-05 08:16:24] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 08:16:27] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-05 08:16:31] [32minfo[39m:DELETE /accommodations/12 - 1 record(s) affected | 4ms
+[2026-01-05 08:16:32] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 2ms
+[2026-01-05 08:16:49] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2026-01-05 08:18:16] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2026-01-05 08:18:20] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 0ms
+[2026-01-05 08:18:46] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2026-01-05 08:21:15] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 08:22:28] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2026-01-05 08:22:31] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2026-01-05 08:26:57] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2026-01-05 08:26:59] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+[2026-01-05 08:27:03] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-05 08:27:39] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
