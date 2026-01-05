@@ -21,7 +21,8 @@ export class LoginComponent {
     password: '',
     confirm: '',
     role: 'user',
-    createdAt: new Date()
+    createdAt: new Date(),
+    status:true
   }
   rememberMe : boolean = false;
 
@@ -36,6 +37,11 @@ export class LoginComponent {
     this.api.Login('users',this.user).then(res=>{
       if(res.status == 500){
         this.message.show('danger','Hiba',"Hiba van a rendszerben")
+        return
+      }
+      if(res.data[0].status == false){
+        this.message.show('danger','Hiba','Sajnáljuk, ez a fiók tiltva van!')
+        alert("Sajnáljuk, a fiók tiltva van! Indok: " + res.data[0].banMessage)
         return
       }
       if(this.rememberMe){

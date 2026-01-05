@@ -21,7 +21,8 @@ export class RegistrationComponent {
     password: '',
     confirm: '',
     role: 'user',
-    createdAt: new Date()
+    createdAt: new Date(),
+    status:true
   }
 
   constructor(

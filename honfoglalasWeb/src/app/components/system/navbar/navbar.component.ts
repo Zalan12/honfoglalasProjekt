@@ -42,8 +42,7 @@ export class NavbarComponent implements OnInit{
       {
         name: 'Kosár',
         icon: 'bi-cart',
-        url:'cart',
-        badge: 3
+        url:'cart'
       },
       ...(this.isAdmin) ? [
         {
@@ -54,12 +53,7 @@ export class NavbarComponent implements OnInit{
         {
           name: 'Felhasználók kezelése',
           icon: 'bi-people',
-          url:'users'
-        },
-        {
-          name: 'Rendelések kezelése',
-          icon: 'bi-receipt',
-          url:'orders'
+          url:'user-control'
         },
         {
           name: 'Statisztika',
