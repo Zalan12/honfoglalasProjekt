@@ -35,6 +35,7 @@ export class CardviewComponent {
     pagedAccomm:Accommodation[] = []
     filteredAccomms:Accommodation[] = [];
     torlendo=0;
+    modId=0
      searchTerm:string = ""
     //-----------------------
     
@@ -76,14 +77,14 @@ export class CardviewComponent {
       })
     }
     getHotel(idx:any){
-    this.Api.Select('accommodations', idx).then(res =>{
-      this.newHotel  = res.data[0];
-      this.selectedUser = res.data[0]
-      this.Api.Select('accommodations/id/eq',idx).then(res=>{
-        this.accomms = res.data,
-        this.formModal2.show()
-        console.log(this.newHotel) 
-          })
+        this.Api.Select('accommodations', idx).then(res =>{
+          this.newHotel  = res.data[0];
+          this.selectedUser = res.data[0]
+          this.Api.Select('accommodations/id/eq',idx).then(res=>{
+            this.accomms = res.data,
+            this.formModal2.show()
+            console.log(this.newHotel) 
+              })
       })
       this.formModal2.show()
     }
@@ -128,5 +129,27 @@ export class CardviewComponent {
   getDeleteId(id:any)
   {
      this.torlendo=id;
+  }
+
+  getModId(id:any)
+  {
+    this.modId=id;
+    this.Api.Select("accommodations",id).then(res=>{
+      this.newHotel=res.data[0]
+    })
+    
+    
+  }
+
+  modAccomm(id:any)
+  {
+    this.Api.Update("accommodations",id,this.newHotel).then(res=>{
+      if(res.status==500)
+      {
+        this.mess.show('danger','Hiba','Sikertelen adatmódosítás')
+      }
+    })
+    
+    this.getHotels();
   }
 }
