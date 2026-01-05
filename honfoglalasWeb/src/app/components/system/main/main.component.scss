@@ -67,7 +67,7 @@ table{
 .hirKep1:hover,.hirKep2:hover
 {
         animation-name: freaky;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
@@ -155,7 +155,9 @@ table{
 @keyframes freaky
 {
     0%{filter: blur(0px) grayscale(0%);}
-    50%{filter: blur(10px) grayscale(100%) brightness(200%);}
+    25%{filter: blur(2px) grayscale(100%) brightness(300%);}
+    50%{filter: blur(0px) grayscale(100%);}
+    75%{filter: blur(2px) grayscale(100%) brightness(200%);}
     100%{filter: blur(0px) grayscale(0%);}
 }
 

@@ -22,7 +22,7 @@
           <li class="list-group-item d-flex justify-content-center"><i class="bi bi-people-fill"></i>: Max {{accomm.capacity}}</li>
           <li *ngIf="isAdmin" class="list-group-item d-flex justify-content-center">
             <button class="btn" data-bs-target="#deleteModal" (click)="getDeleteId(accomm.id)" data-bs-toggle="modal"  style="color: red;"><i class="bi bi-trash"></i></button>
-            <button class="btn" style="color: goldenrod;"><i class="bi bi-gear"></i></button>
+            <button class="btn" style="color: goldenrod;" data-bs-target="#modifyModal" data-bs-toggle="modal"><i class="bi bi-gear" (click)="getModId(accomm.id)" ></i></button>
           </li>
         </ul> 
         <div class="kor">{{accomm.id}}</div>
@@ -96,25 +96,45 @@
 </div>
 
 
-<!--Delete modal-->
 
-<div class="modal fade modal-lg" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+<!--Modify modal-->
+<div class="modal fade modal-lg" id="modifyModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        
-        <h3>Biztosan törlöd az elemet?</h3>
+        <h1 class="modal-title fs-5" id="newHotelMLabel">Új hotel felvétele</h1>
   
-        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+      
 
-        <p>Az elem törlésével az adat elveszik örökre, visszaállításra nincsen lehetőség!</p>
-       
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="newHotelName" placeholder="Név" [(ngModel)]="newHotel.name" value="newHotel.name">
+        <label for="newHotelName">Név</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="newHotelAddress" placeholder="Cím" [(ngModel)]="newHotel.address">
+        <label for="newHotelAddress">Cím</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="number" min="1" class="form-control" id="newHotelCapcity" placeholder="Max. fő" [(ngModel)]="newHotel.capacity">
+        <label for="newHotelCapcity">Max. fő</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="number" min="0" class="form-control" id="newHotelBasePrice" placeholder="Ár" [(ngModel)]="newHotel.basePrice">
+        <label for="newHotelBasePrice">Ár</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input class="form-control textarea" id="newHotelDesc" placeholder="Leírás" [(ngModel)]="newHotel.descrip">
+        <label for="newHotelDesc">Leírás</label>
+      </div>
+
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="getHotels()">Mégsem</button>
-        <button type="button" (click)="deleteAccom(torlendo)" class="btn btn-success">Megerősítés</button>
+        <button type="button" class="btn" style="font-size: larger;" data-bs-dismiss="modal"><i class="bi bi-arrow-return-left"></i></button>
+        <button type="button" style="color: green; font-size: larger;" class="btn" (click)="modAccomm(newHotel.id)"><i class="bi bi-floppy"></i></button>
       </div>
     </div>
   </div>

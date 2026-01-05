@@ -6,6 +6,7 @@ import { LoginComponent } from './components/user/login/login.component';
 import { LogoutComponent } from './components/user/logout/logout.component';
 import { CardviewComponent } from './components/system/cardview/cardview.component';
 import { UpdateprofileComponent } from './components/user/updateprofile/updateprofile.component';
+import { BookingComponent } from './components/user/booking/booking.component';
 import { UserControlComponent } from './components/admin/user-control/user-control.component';
 
 export const routes: Routes = [
@@ -15,7 +16,9 @@ export const routes: Routes = [
     {path: 'login', component:LoginComponent},
     {path: 'logout', component:LogoutComponent},
     {path:'main',component:MainComponent},
-    {path:'user-control',component:UserControlComponent},
+    {path:'booking',component:BookingComponent},
+    {path:'user-control', component: UserControlComponent}
+
     {path: '', redirectTo: "/main", pathMatch: 'full'},
     {path: '**', component:NotfoundComponent}
     
