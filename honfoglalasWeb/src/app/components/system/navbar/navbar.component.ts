@@ -40,15 +40,9 @@ export class NavbarComponent implements OnInit{
     this.navItems=[
       ...(this.isLoggedIn)?[
       {
-<<<<<<< HEAD
-        name: 'Kosár',
-        icon: 'bi-cart',
-        url:'cart'
-=======
         name: 'Foglalások',
         icon: 'bi-bookmark-check',
         url:'booking'
->>>>>>> d564928bfb40726b85f4fb7ce6cfd4053df34058
       },
       ...(this.isAdmin) ? [
         {

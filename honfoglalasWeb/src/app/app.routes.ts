@@ -17,7 +17,7 @@ export const routes: Routes = [
     {path: 'logout', component:LogoutComponent},
     {path:'main',component:MainComponent},
     {path:'booking',component:BookingComponent},
-    {path:'user-control', component: UserControlComponent}
+    {path:'user-control', component: UserControlComponent},
 
     {path: '', redirectTo: "/main", pathMatch: 'full'},
     {path: '**', component:NotfoundComponent}
