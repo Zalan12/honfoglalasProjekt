@@ -34,6 +34,13 @@ export class UpdateprofileComponent implements OnInit{
   }
 
 
+
+
+  oldPass:string="";
+  newPass:string="";
+  confPass:string="";
+
+
   ngOnInit(): void {
     this.getProfile(Number(localStorage.getItem("loggedUserId")));
   }
@@ -64,5 +71,32 @@ export class UpdateprofileComponent implements OnInit{
       }
   
   })
+}
+
+modPass()
+{
+    if(this.newPass!=this.confPass)
+    {
+      alert("A jelszavak nem egyeznek!");
+      return;
+    }
+
+
+    if(this.oldPass==this.newPass)
+    {
+      alert("Nem adhatsz meg régi jelszót!");
+      return;
+    }
+    
+    this.user.password=this.newPass;
+    this.api.Update("users",Number(localStorage.getItem("loggedUserId")),this.user).then(res=>{
+      if(res.status==500)
+      {
+        alert("Hiba a módosítás során!");
+      }
+
+    })
+
+
 }
 }

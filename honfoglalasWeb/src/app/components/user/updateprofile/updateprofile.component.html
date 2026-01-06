@@ -1,8 +1,8 @@
-<h3>Profiladatok kezelése</h3>
-<hr>
+
 
 <div class="col-sm-6 offset-sm-3">
-
+<h3>Profiladatok kezelése</h3>
+<hr>
 <div class="form-floating mb-3">
   <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="{{user.email}}" [(ngModel)]="user.email">
   <label for="floatingInput">Email-cím módosítása</label>
@@ -24,4 +24,20 @@
 </div>
 </div>
 
-
+<div class="col-sm-6 offset-sm-3">
+  <h3>Jelszavak kezelése</h3>
+<hr>
+<div class="form-floating mb-3">
+  <input type="password" class="form-control" id="floatingPassword" placeholder="Jelenlegi jelszó" [(ngModel)]="oldPass">
+  <label for="floatingPassword">Jelenlegi jelszó</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="password" class="form-control" id="floatingPassword" placeholder="Új jelszó" [(ngModel)]="newPass">
+  <label for="floatingPassword">Új jelszó</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="password" class="form-control" id="floatingPassword" placeholder="Új jelszó megerősítése" [(ngModel)]="confPass">
+  <label for="floatingPassword">Új jelszó megerősítése</label>
+</div>
+<button class="btn btn-warning" (click)="modPass()">Módosítás</button>
+</div>
