@@ -3264,3 +3264,47 @@
 [2026-01-05 09:40:25] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
 [2026-01-05 09:55:13] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
 >>>>>>> d564928bfb40726b85f4fb7ce6cfd4053df34058
+[2026-01-06 08:07:23] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 08:07:52] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 13ms
+[2026-01-06 08:10:37] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 08:10:41] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 8ms
+[2026-01-06 08:10:51] [32minfo[39m:POST /users/login - 1 record(s) affected | 4ms
+[2026-01-06 08:10:51] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 1ms
+[2026-01-06 08:10:58] [32minfo[39m:GET /accommodations/1 - 1 record(s) Sent | 2ms
+[2026-01-06 08:10:58] [32minfo[39m:GET /accommodations/id/eq/1 - 1 record(s) Sent | 1ms
+[2026-01-06 08:11:04] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 2ms
+[2026-01-06 08:11:51] [32minfo[39m:GET /users - 33 record(s) Sent | 2ms
+[2026-01-06 08:11:55] [32minfo[39m:GET /users/5 - 1 record(s) Sent | 2ms
+[2026-01-06 08:11:55] [32minfo[39m:GET /users/id/eq/5 - 1 record(s) Sent | 1ms
+[2026-01-06 08:11:57] [32minfo[39m:GET /users - 33 record(s) Sent | 4ms
+[2026-01-06 08:11:57] [32minfo[39m:PATCH /users/5 - 1 record(s) affected | 7ms
+[2026-01-06 08:11:57] [32minfo[39m:PATCH /users/5 - 1 record(s) affected | 1ms
+[2026-01-06 08:11:59] [32minfo[39m:GET /users/6 - 1 record(s) Sent | 1ms
+[2026-01-06 08:11:59] [32minfo[39m:GET /users/id/eq/6 - 1 record(s) Sent | 1ms
+[2026-01-06 08:12:00] [32minfo[39m:GET /users - 33 record(s) Sent | 3ms
+[2026-01-06 08:12:00] [32minfo[39m:PATCH /users/6 - 1 record(s) affected | 5ms
+[2026-01-06 08:12:00] [32minfo[39m:PATCH /users/6 - 1 record(s) affected | 1ms
+[2026-01-06 08:12:00] [32minfo[39m:GET /users - 33 record(s) Sent | 1ms
+[2026-01-06 08:12:01] [32minfo[39m:GET /users/5 - 1 record(s) Sent | 1ms
+[2026-01-06 08:12:01] [32minfo[39m:GET /users/id/eq/5 - 1 record(s) Sent | 1ms
+[2026-01-06 08:12:02] [32minfo[39m:GET /users - 33 record(s) Sent | 3ms
+[2026-01-06 08:12:02] [32minfo[39m:PATCH /users/5 - 1 record(s) affected | 4ms
+[2026-01-06 08:12:02] [32minfo[39m:PATCH /users/5 - 1 record(s) affected | 1ms
+[2026-01-06 08:12:02] [32minfo[39m:GET /users - 33 record(s) Sent | 1ms
+[2026-01-06 08:12:12] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-06 08:12:15] [32minfo[39m:GET /users - 33 record(s) Sent | 1ms
+[2026-01-06 08:12:16] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 1ms
+[2026-01-06 08:12:21] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 1ms
+[2026-01-06 08:12:27] [32minfo[39m:GET /accommodations/1 - 1 record(s) Sent | 1ms
+[2026-01-06 08:12:35] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 1ms
+[2026-01-06 08:12:35] [32minfo[39m:PATCH /accommodations/1 - 1 record(s) affected | 3ms
+[2026-01-06 08:12:37] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 1ms
+[2026-01-06 08:12:41] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 0ms
+[2026-01-06 08:14:07] [32minfo[39m:GET /accommodations/1 - 1 record(s) Sent | 2ms
+[2026-01-06 08:14:07] [32minfo[39m:GET /accommodations/id/eq/1 - 1 record(s) Sent | 1ms
+[2026-01-06 08:14:48] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 1ms
+[2026-01-06 08:16:36] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 0ms
+[2026-01-06 08:16:48] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 1ms
+[2026-01-06 08:17:00] [32minfo[39m:GET /accommodations/1 - 1 record(s) Sent | 1ms
+[2026-01-06 08:17:00] [32minfo[39m:GET /accommodations/id/eq/1 - 1 record(s) Sent | 1ms
+[2026-01-06 08:17:04] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 1ms
