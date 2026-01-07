@@ -51,6 +51,11 @@ export class NavbarComponent implements OnInit{
           url:'cardview'
         },
         {
+          name: 'Felhasználók kezelése',
+          icon: 'bi-people',
+          url:'user-control'
+        },
+        {
           name: 'Statisztika',
           icon: 'bi-graph-up-arrow',
           url:'stats'

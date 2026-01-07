@@ -48,11 +48,13 @@
 <div class="container">
 
     <div class="card" style="width: 21%;" *ngFor="let accomm of pagedAccomm; let i=index">
-        <img src="hotel{{accomm.id}}.jpg" class="card-img-top" alt="Hotel{{accomm.id}}">
+        <img *ngIf="accomm.active==true" src="hotel{{i+1}}.jpg" class="card-img-top" alt="Hotel{{accomm.id}}">
+        <img *ngIf="accomm.active==false" src="hotel{{i+1}}.jpg" class="card-img-top" alt="Hotel{{accomm.id}}" id="nincsHely">
         <div class="card-body">
           <h5 class="card-title">{{accomm.name}}</h5>
           <p class="card-text"></p>
-         <button class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#infoModal" (click)="getHotel(accomm.id)">További információ <i class="bi bi-info-circle-fill"></i></button>
+         <button *ngIf="accomm.active==true" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#infoModal" (click)="getHotel(accomm.id)">További információ <i class="bi bi-info-circle-fill"></i></button>
+         <a href="#" *ngIf="accomm.active==false" class="btn btn-danger  disabled" data-bs-toggle="modal" data-bs-target="#formModal" aria-disabled="true">Nincsen szabad szállás</a>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><i class="bi bi-geo-alt"></i> {{accomm.address}}</li>
@@ -60,7 +62,7 @@
           <li class="list-group-item"><i class="bi bi-people-fill"></i>: Max {{accomm.capacity}}</li>
         </ul> 
         <div class="kor">{{accomm.id}}</div>
-      </div>
+    </div>
       
 
 </div>
@@ -124,7 +126,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="getHotels()">Mégsem</button>
-        <button type="button" class="btn btn-success">Megerősítés</button>
+        <button type="button" class="btn btn-success" routerLink="cardview">Érdekel!</button>
       </div>
     </div>
   </div>

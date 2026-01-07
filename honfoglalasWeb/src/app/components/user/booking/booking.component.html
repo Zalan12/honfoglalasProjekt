@@ -1,1 +1,15 @@
-<h3>Jelenlegi foglalásaim</h3>
+<div class="container">
+    <h1><b>Jelenlegi foglalásaim</b></h1>
+    <hr>
+    <h4 class="text-center">Aktív</h4>
+        <div>
+            <div class="card" style="width: 21%;" *ngFor="let bookedAccom of MyBookings; let i = index">
+                <p>{{bookedAccom.accommodationId}}</p>
+            </div>
+        </div>
+    <hr>
+    <h4 class="text-center">Inaktív</h4>
+        <div>
+
+        </div>
+</div>

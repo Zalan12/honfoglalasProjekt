@@ -9,6 +9,7 @@ import { MessageService } from '../../../services/message.service';
 import { AuthService } from '../../../services/auth.service';
 import { User } from '../../../interfaces/user';
 import { NumberFormatPipe } from '../../../pipes/number-format.pipe';
+import { Booking } from '../../../interfaces/booking';
 declare var bootstrap: any;
 
 @Component({
@@ -23,10 +24,12 @@ export class CardviewComponent {
     selectedFile: File | null = null;
     accomms:Accommodation[]=[];
     accomimgs: AccommodationImages[] = []
+    bookings: Booking[] = []
     isAdmin = false
     editmode = false;
     newHotelM: any
     formModal2:any
+    bookingModal:any
   
     //Lapozásos miújságok---- freakster was freaking here 😜😜👅👅👅😛😛👅😜😜
     currentPage = 1;
@@ -53,6 +56,16 @@ export class CardviewComponent {
         active:false,
         createdAt:""
       }
+      newBooking:Booking ={
+        userId:0,
+        accommodationId:0,
+        startDate: new Date(),
+        endDate: new Date(),
+        persons: 0,
+        totalPrice: 0,
+        status: false,
+        createdAt: new Date()
+      }
     
       currency=enviroment.currency;
     
@@ -64,6 +77,7 @@ export class CardviewComponent {
     
     ngOnInit(): void {
       this.formModal2 = new bootstrap.Modal('#formModal')
+      this.bookingModal = new bootstrap.Modal('#bookingModal')
       this.getHotels();
       this.isAdmin = this.auth.isAdmin()
     }
@@ -152,4 +166,28 @@ export class CardviewComponent {
     
     this.getHotels();
   }
-}
+
+  SwitchStatus(id:any){
+    this.Api.Update('accommodations',id,{active:this.accomms[id].active ? 1: 0})
+    this.getHotels();
+  }
+
+
+  UjFoglalas(idx:any){
+    if(this.newBooking.persons == 0 || !this.newBooking.startDate ||!this.newBooking.endDate){
+      alert("Nem adtál meg minden adatot!")
+      return
+    }
+    this.newBooking.accommodationId = idx
+    this.newBooking.status = true
+    this.newBooking.userId = localStorage.getItem("loggedUserId")
+    this.newBooking.totalPrice = (this.accomms[0].basePrice * this.newBooking.persons)
+    this.Api.Insert('bookings', this.newBooking).then(res =>{
+        if(res.status == 500){
+          console.log("Hiba. A foglalás sikertelen.")
+          return
+        }
+    this.bookingModal.hide()
+  }
+  )
+}}

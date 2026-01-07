@@ -34,7 +34,8 @@ export class UpdateprofileComponent implements OnInit {
     password: '',
     role: 'user',
     createdAt: new Date(),
-    latestLogin: new Date()
+    latestLogin:new Date(),
+    status:true
   }
 
 
@@ -103,7 +104,8 @@ export class UpdateprofileComponent implements OnInit {
           password: '',
           role: 'user',
           createdAt: new Date(),
-          latestLogin: new Date()
+          latestLogin: new Date(),
+          status: true
         }
         setTimeout(() => {
           window.location.reload()

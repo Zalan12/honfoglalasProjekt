@@ -6,5 +6,7 @@ export interface User{
     confirm?: string,
     role: string,
     createdAt: Date,
-    latestLogin:Date
+    latestLogin?: Date,
+    status:boolean,
+    banMessage?:string
 }

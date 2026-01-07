@@ -6,6 +6,6 @@ export const enviroment = {
     author:'Farkas & Rék Co.',
     email:'rokaestarsa@hon.hu',
     phone:'+36 20 224 2035',
-    date:'2026 , Minden jog fenntartva',
+    date:'2026, Jogok nagyjából fenntartva',
     address:'6767, Bátonypusztarétesd, Jókai Mór utca 103'
 }

@@ -22,7 +22,7 @@ export class RegistrationComponent {
     confirm: '',
     role: 'user',
     createdAt: new Date(),
-    latestLogin:new Date()
+    status:true
   }
 
   constructor(
@@ -32,7 +32,6 @@ export class RegistrationComponent {
   ){}
 
   register(){
-    alert('a')
     if(!this.acceptTerms)
       {
         this.message.show('danger','Hiba','Nem fogadtad el a szabályzatot!')
