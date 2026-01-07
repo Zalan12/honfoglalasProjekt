@@ -2293,3 +2293,27 @@
 [2026-01-07 09:27:41] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
 [2026-01-07 09:28:14] [32minfo[39m:PATCH /users/31 - 1 record(s) affected | 3ms
 [2026-01-07 09:28:16] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:39:05] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-07 09:39:10] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:40:06] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-07 09:40:07] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 0ms
+[2026-01-07 09:40:08] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-07 09:40:10] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-07 09:40:14] [32minfo[39m:GET /accommodations/7 - 1 record(s) Sent | 1ms
+[2026-01-07 09:40:14] [32minfo[39m:GET /accommodations/id/eq/7 - 1 record(s) Sent | 0ms
+[2026-01-07 09:40:16] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-07 09:53:07] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 2ms
+[2026-01-07 09:53:25] [32minfo[39m:PATCH /users/31 - 1 record(s) affected | 20ms
+[2026-01-07 09:53:27] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:53:35] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-07 09:53:38] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-07 09:55:29] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-07 09:55:31] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 0ms
+[2026-01-07 09:55:32] [32minfo[39m:GET /accommodations/3 - 1 record(s) Sent | 1ms
+[2026-01-07 09:55:32] [32minfo[39m:GET /accommodations/id/eq/3 - 1 record(s) Sent | 1ms
+[2026-01-07 09:59:15] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-07 10:00:34] [32minfo[39m:POST /users/registration - 1 record(s) affected | 3ms
+[2026-01-07 10:00:35] [31merror[39m:[DB error]: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'to,subject,data) VALUES('registration','mexicanfood@turr.hu','Sikeres regiszt...' at line 1
+[2026-01-07 10:01:21] [32minfo[39m:POST /users/login - 0 record(s) affected | 1ms
+[2026-01-07 10:01:35] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-07 10:06:22] [32minfo[39m:POST /users/login - 0 record(s) affected | 9ms
