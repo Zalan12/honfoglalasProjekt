@@ -3263,6 +3263,7 @@
 [2026-01-05 09:38:35] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
 [2026-01-05 09:40:25] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
 [2026-01-05 09:55:13] [32minfo[39m:GET /accommodations - 5 record(s) Sent | 1ms
+<<<<<<< HEAD
 >>>>>>> d564928bfb40726b85f4fb7ce6cfd4053df34058
 [2026-01-06 08:07:23] [32minfo[39m:Server listening on http://localhost:3000
 [2026-01-06 08:07:52] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 13ms
@@ -3308,3 +3309,126 @@
 [2026-01-06 08:17:00] [32minfo[39m:GET /accommodations/1 - 1 record(s) Sent | 1ms
 [2026-01-06 08:17:00] [32minfo[39m:GET /accommodations/id/eq/1 - 1 record(s) Sent | 1ms
 [2026-01-06 08:17:04] [32minfo[39m:GET /accommodations - 9 record(s) Sent | 1ms
+=======
+[2026-01-06 09:01:24] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:06:08] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:06:29] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:07:18] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:09:18] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:09:35] [31merror[39m:[DB error]: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1584089869, 844480495, -1788864368, -1344796919, `sigBytes` = 20, `$super` = ...' at line 1
+[2026-01-06 09:11:22] [31merror[39m:[DB error]: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1584089869, 844480495, -1788864368, -1344796919, `sigBytes` = 20, `$super` = ...' at line 1
+[2026-01-06 09:11:47] [31merror[39m:[DB error]: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1584089869, 844480495, -1788864368, -1344796919, `sigBytes` = 20, `$super` = ...' at line 1
+[2026-01-06 09:13:11] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:13:14] [31merror[39m:[DB error]: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[object Object]'' WHERE id='31'' at line 1
+[2026-01-06 09:13:59] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:14:06] [31merror[39m:[DB error]: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id='31'' at line 1
+[2026-01-06 09:14:50] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:14:52] [31merror[39m:[DB error]: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id=31' at line 1
+[2026-01-06 09:15:10] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:15:11] [31merror[39m:[DB error]: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id==31' at line 1
+[2026-01-06 09:15:22] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:15:29] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:15:46] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:15:56] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:16:05] [31merror[39m:[DB error]: ER_BAD_FIELD_ERROR: Unknown column 'da39a3ee5e6b4b0d3255bfef95601890afd80709' in 'field list'
+[2026-01-06 09:17:16] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:17:19] [32minfo[39m:PATCH /users/modPass/31 - 1 record(s) affected | 11ms
+[2026-01-06 09:17:37] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:17:50] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:17:53] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 7ms
+[2026-01-06 09:17:54] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 2ms
+[2026-01-06 09:18:03] [32minfo[39m:POST /users/login - 0 record(s) affected | 1ms
+[2026-01-06 09:18:54] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:19:10] [32minfo[39m:POST /users/login - 1 record(s) affected | 10ms
+[2026-01-06 09:19:11] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-06 09:19:16] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-06 09:19:19] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 2ms
+[2026-01-06 09:19:21] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-06 09:20:02] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-06 09:20:11] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-06 09:20:24] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-06 09:20:27] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-06 09:20:52] [32minfo[39m:PATCH /users/modPass/31 - 1 record(s) affected | 5ms
+[2026-01-06 09:20:54] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-06 09:22:27] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:22:42] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:22:52] [32minfo[39m:POST /users/login - 0 record(s) affected | 10ms
+[2026-01-06 09:23:03] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:23:15] [32minfo[39m:POST /users/login - 0 record(s) affected | 9ms
+[2026-01-06 09:23:25] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:23:53] [32minfo[39m:POST /users/login - 0 record(s) affected | 9ms
+[2026-01-06 09:25:09] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:25:32] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:25:53] [32minfo[39m:POST /users/login - 0 record(s) affected | 10ms
+[2026-01-06 09:25:54] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:26:01] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:26:02] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:26:02] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:26:02] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:26:37] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:26:37] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:26:37] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:26:37] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:26:37] [32minfo[39m:POST /users/login - 0 record(s) affected | 1ms
+[2026-01-06 09:27:02] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:27:12] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:27:26] [32minfo[39m:PATCH /users/modPass/31 - 1 record(s) affected | 12ms
+[2026-01-06 09:27:52] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:28:19] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:28:22] [32minfo[39m:POST /users/login - 0 record(s) affected | 10ms
+[2026-01-06 09:28:52] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:29:23] [32minfo[39m:POST /users/login - 0 record(s) affected | 10ms
+[2026-01-06 09:33:07] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:33:19] [32minfo[39m:POST /users/login - 0 record(s) affected | 10ms
+[2026-01-06 09:33:20] [32minfo[39m:POST /users/login - 0 record(s) affected | 3ms
+[2026-01-06 09:33:21] [32minfo[39m:POST /users/login - 0 record(s) affected | 2ms
+[2026-01-06 09:38:00] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:38:05] [32minfo[39m:POST /users/login - 0 record(s) affected | 7ms
+[2026-01-06 09:38:28] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:54:20] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-06 09:58:43] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-07 08:08:59] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-07 08:09:20] [31merror[39m:[DB error]: connect ECONNREFUSED ::1:3306
+[2026-01-07 08:09:28] [31merror[39m:[DB error]: connect ECONNREFUSED ::1:3306
+[2026-01-07 08:09:51] [32minfo[39m:POST /users/login - 0 record(s) affected | 34ms
+[2026-01-07 08:10:06] [32minfo[39m:Server listening on http://localhost:3000
+[2026-01-07 08:12:01] [32minfo[39m:POST /users/login - 1 record(s) affected | 8ms
+[2026-01-07 08:12:02] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 2ms
+[2026-01-07 08:12:42] [32minfo[39m:GET /accommodations/3 - 1 record(s) Sent | 1ms
+[2026-01-07 08:12:42] [32minfo[39m:GET /accommodations/id/eq/3 - 1 record(s) Sent | 1ms
+[2026-01-07 08:12:45] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 2ms
+[2026-01-07 08:12:46] [32minfo[39m:GET /accommodations/3 - 1 record(s) Sent | 1ms
+[2026-01-07 08:12:46] [32minfo[39m:GET /accommodations/id/eq/3 - 1 record(s) Sent | 1ms
+[2026-01-07 08:12:59] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-07 08:13:00] [32minfo[39m:GET /accommodations/3 - 1 record(s) Sent | 2ms
+[2026-01-07 08:13:00] [32minfo[39m:GET /accommodations/id/eq/3 - 1 record(s) Sent | 1ms
+[2026-01-07 08:13:02] [32minfo[39m:GET /accommodations - 6 record(s) Sent | 1ms
+[2026-01-07 08:13:07] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:00:08] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:00:57] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:02:00] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:07:23] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:07:31] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:10:35] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:10:36] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:10:52] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:11:09] [32minfo[39m:PATCH /users/31 - 1 record(s) affected | 3ms
+[2026-01-07 09:13:19] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:14:24] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-07 09:17:09] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:17:18] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:18:43] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:19:48] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:20:12] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:20:19] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 0ms
+[2026-01-07 09:20:25] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:20:44] [32minfo[39m:PATCH /users/31 - 1 record(s) affected | 21ms
+[2026-01-07 09:20:47] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:26:16] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:26:33] [32minfo[39m:PATCH /users/31 - 1 record(s) affected | 3ms
+[2026-01-07 09:26:39] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:26:47] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:27:41] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+[2026-01-07 09:28:14] [32minfo[39m:PATCH /users/31 - 1 record(s) affected | 3ms
+[2026-01-07 09:28:16] [32minfo[39m:GET /users/31 - 1 record(s) Sent | 1ms
+>>>>>>> 6929e853ae4217c9e4f40e1a8b517ea447833088
