@@ -21,8 +21,8 @@
           <li class="list-group-item d-flex justify-content-center" style="font-weight: bolder; font-size: larger;"><i class="bi bi-cash-coin"></i> {{accomm.basePrice}} {{currency}}</li>
           <li class="list-group-item d-flex justify-content-center"><i class="bi bi-people-fill"></i>: Max {{accomm.capacity}}</li>
           <li *ngIf="isAdmin" class="list-group-item d-flex justify-content-center">
-            <button class="btn" data-bs-target="#deleteModal" (click)="getDeleteId(accomm.id)" data-bs-toggle="modal"  style="color: red;"><i class="bi bi-trash"></i></button>
-            <button class="btn" style="color: goldenrod;" data-bs-target="#modifyModal" data-bs-toggle="modal"><i class="bi bi-gear" (click)="getModId(accomm.id)" ></i></button>
+            <button class="btn" data-bs-target="#deleteModal" (click)="getDeleteId(accomm.id)" data-bs-toggle="modal"  style="color: rgb(255, 0, 0);"><i class="bi bi-trash"></i></button>
+            <button class="btn" style="color: rgb(218, 165, 32);" data-bs-target="#modifyModal" data-bs-toggle="modal"><i class="bi bi-gear" (click)="getModId(accomm.id)" ></i></button>
             <button class="btn" style="color: rgb(218, 75, 32);" *ngIf="accomm.active==true && isAdmin"><i class="bi bi-x-lg" (click)="SwitchStatus(accomm.id)" ></i></button>
             <button class="btn" style="color: rgb(32, 218, 48);" *ngIf="accomm.active==false && isAdmin"><i class="bi bi-check-lg" (click)="SwitchStatus(accomm.id)" ></i></button>
           </li>
@@ -114,11 +114,11 @@
           <hr>
           <h4 class="text-center">Szállás adatok</h4>
               <div class="form-floating mb-3">
-                <input type="date" class="form-control" id="newBookStartDate" placeholder="Mettől" [(ngModel)]="newBooking.startDate">  
+                <input type="date" class="form-control" id="newBookStartDate" placeholder="Mettől" [(ngModel)]="newBooking.startDate" min="minDateString">  
                 <label for="newBookStartDate">Mettől</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="date" class="form-control" id="newBookEndDate" placeholder="Meddig" [(ngModel)]="newBooking.endDate">
+                <input type="date" class="form-control" id="newBookEndDate" placeholder="Meddig" [(ngModel)]="newBooking.endDate" min="minDate">
                 <label for="newBookEndDate">Meddig</label>
               </div>
               <div class="form-floating mb-3">
@@ -137,7 +137,29 @@
 
 
 
+<!--Delete modal-->
 
+<div class="modal fade modal-lg" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h3>Biztosan törlöd az elemet?</h3>
+  
+        
+      </div>
+      <div class="modal-body">
+
+        <p>Az elem törlésével az adat elveszik örökre, visszaállításra nincsen lehetőség!</p>
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="getHotels()">Mégsem</button>
+        <button type="button" (click)="deleteAccom(torlendo)" class="btn btn-success">Megerősítés</button>
+      </div>
+    </div>
+</div>
+</div>
 
 
 
