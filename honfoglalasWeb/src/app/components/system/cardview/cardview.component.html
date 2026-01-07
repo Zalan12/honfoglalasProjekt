@@ -137,6 +137,27 @@
 
 
 
+<!--Delete modal-->
+
+<div class="modal fade modal-lg" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h3>Biztosan törlöd az elemet?</h3>
+  
+        
+      </div>
+      <div class="modal-body">
+
+        <p>Az elem törlésével az adat elveszik örökre, visszaállításra nincsen lehetőség!</p>
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="getHotels()">Mégsem</button>
+        <button type="button" (click)="deleteAccom(torlendo)" class="btn btn-success">Megerősítés</button>
+      </div>
+    </div>
 
 
 
