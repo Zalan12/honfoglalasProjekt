@@ -44,6 +44,11 @@ export class NavbarComponent implements OnInit{
         icon: 'bi-bookmark-check',
         url:'booking'
       },
+      {
+          name: 'Szállásaink',
+          icon: 'bi-database',
+          url:'cardview'
+      },
       ...(this.isAdmin) ? [
         {
           name: 'Szállásaink',
@@ -61,11 +66,6 @@ export class NavbarComponent implements OnInit{
           url:'stats'
         },
       ] : [
-        {
-          name: 'Rendeléseim',
-          icon: 'bi-receipt',
-          url:'myorders'
-        },
       ], 
       {
         name: 'Profil',
