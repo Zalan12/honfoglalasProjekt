@@ -30,6 +30,12 @@ export class CardviewComponent {
     newHotelM: any
     formModal2:any
     bookingModal:any
+    
+
+
+    //date cuccos
+   
+
   
     //Lapozásos miújságok---- freakster was freaking here 😜😜👅👅👅😛😛👅😜😜
     currentPage = 1;
@@ -39,6 +45,7 @@ export class CardviewComponent {
     filteredAccomms:Accommodation[] = [];
     torlendo=0;
     modId=0
+    
      searchTerm:string = ""
     //-----------------------
     
@@ -66,7 +73,7 @@ export class CardviewComponent {
         status: false,
         createdAt: new Date()
       }
-    
+
       currency=enviroment.currency;
     
       constructor(
@@ -79,7 +86,13 @@ export class CardviewComponent {
       this.formModal2 = new bootstrap.Modal('#formModal')
       this.bookingModal = new bootstrap.Modal('#bookingModal')
       this.getHotels();
-      this.isAdmin = this.auth.isAdmin()
+      this.isAdmin = this.auth.isAdmin();
+      let  minDate:Date = new Date;
+      
+      let minDateString=`${minDate.getFullYear()}-${minDate.getMonth()}-${minDate.getDay()}`
+      
+      
+     
     }
     getHotels(){
       this.Api.SelectAll('accommodations').then(res =>{
