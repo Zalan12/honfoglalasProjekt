@@ -1,15 +1,54 @@
 <div class="container">
     <h1><b>Jelenlegi foglalásaim</b></h1>
     <hr>
-    <h4 class="text-center">Aktív</h4>
-        <div>
+    <h4 class="text-center valasztoCim">- Aktív -</h4>
+        <div class="KartyaFelsorolas">
             <div class="card" style="width: 21%;" *ngFor="let bookedAccom of MyBookings; let i = index">
-                <p>{{bookedAccom.accommodationId}}</p>
+                <img src="hotel{{i+1}}.jpg" alt="">
+                <h5 class="card-title">{{accomms[bookedAccom.accommodationId-1].name}}</h5>
+                
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Véget ér: {{bookedAccom.endDate}}</li>
+                    <li class="list-group-item">Össz fő: {{bookedAccom.persons}}</li>
+                    <li class="list-group-item">Fizetett összeg: {{bookedAccom.totalPrice | numberFormat}} {{currency}}</li>
+                </ul>
+                
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cím: {{accomms[bookedAccom.accommodationId-1].address}}</li>
+                </ul>
+                
+                <hr>
+                <button class="btn btn-danger me-3 lemondasBtn text-center" data-bs-toggle="modal" data-bs-target="#deleteModal" (click)="getDeleteId(MyBookings[i-1].id)">Lemondás <i class="bi bi-clipboard2-x"></i></button>
+                <hr>
             </div>
         </div>
     <hr>
-    <h4 class="text-center">Inaktív</h4>
-        <div>
-
+    <h4 class="text-center valasztoCim">- Inaktív -</h4>
+        <div class="KartyaFelsorolas">
+            <p>WIP</p>
         </div>
+</div>
+
+
+
+
+
+<!--Info modal-->
+<div class="modal fade modal-lg" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="formModalLabel">Biztos vagy benne?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <h3>Biztos le szeretnéd mondani a foglalásod? A lemondást követő pillanattól kezdve nincs visszaút.</h3>
+        <p>A foglalásért fizetett összeg manuálisan, egy panaszlevelen keresztül visszaigényelhető.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégsem</button>
+        <button type="button" class="btn btn-danger" routerLink="cardview" (click)="Lemondas(MyBookings[0].id)">Lemondom!</button>
+      </div>
+    </div>
+  </div>
 </div>

@@ -8,6 +8,8 @@ import { APIservice } from '../../../services/api.service';
 import { Booking } from '../../../interfaces/booking';
 import { Accommodation } from '../../../interfaces/accommodation';
 import { User } from '../../../interfaces/user';
+import { enviroment } from '../../../../enviorments/enviorment';
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-booking',
@@ -22,7 +24,10 @@ export class BookingComponent implements OnInit{
     bookedAccoms: Booking[] = []
     MyBookings: Booking [] =[]
     accomms:Accommodation[]=[];
-
+    currency=enviroment.currency;
+    deleteModal:any
+    torlendo=0;
+    
 
     //Lapozásos miújságok---- freakster was freaking here 😜😜👅👅👅😛😛👅😜😜
     currentPage = 1;
@@ -30,7 +35,6 @@ export class BookingComponent implements OnInit{
     totalPages = 1;
     pagedAccomm:Accommodation[] = []
     filteredAccomms:Accommodation[] = [];
-    torlendo=0;
     modId=0
      searchTerm:string = ""
     //-----------------------
@@ -39,6 +43,7 @@ export class BookingComponent implements OnInit{
       this.isAdmin = this.auth.isAdmin()
       this.getHotels()
       this.getMyBookings()
+      this.deleteModal = new bootstrap.Modal('#deleteModal')
     }
     constructor(
       private Api: APIservice,
@@ -91,11 +96,23 @@ export class BookingComponent implements OnInit{
         console.log("a")
         if(this.bookedAccoms[i].userId == localStorage.getItem("loggedUserId")){
           console.log("b")
+          this.bookedAccoms[i].endDate = this.bookedAccoms[i].endDate.toString().split("T")[0]
           this.MyBookings.push(this.bookedAccoms[i])
         }
       }
         console.log(this.bookedAccoms)
       })
 
+    }
+
+    getDeleteId(id:any){
+      this.torlendo = id
+    }
+    Lemondas(idx:any){
+      this.deleteModal.hide()
+      alert(this.MyBookings[this.torlendo].accommodationId)
+      this.MyBookings[idx].status = 0;
+      this.Api.Delete("bookings",idx)
+      this.torlendo = 0;
     }
 }

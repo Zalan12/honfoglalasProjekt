@@ -2,10 +2,10 @@ export interface Booking{
     id?:number;
     userId:any;
     accommodationId:number;
-    startDate:Date;
-    endDate:Date;
+    startDate:Date | string;
+    endDate:Date | string;
     persons:number;
     totalPrice?:number;
-    status:boolean;
+    status:number;
     createdAt:Date;
 }

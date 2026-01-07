@@ -63,7 +63,7 @@ export class CardviewComponent {
         endDate: new Date(),
         persons: 0,
         totalPrice: 0,
-        status: false,
+        status: 1,
         createdAt: new Date()
       }
     
@@ -179,7 +179,7 @@ export class CardviewComponent {
       return
     }
     this.newBooking.accommodationId = idx
-    this.newBooking.status = true
+    this.newBooking.status = 1
     this.newBooking.userId = localStorage.getItem("loggedUserId")
     this.newBooking.totalPrice = (this.accomms[0].basePrice * this.newBooking.persons)
     this.Api.Insert('bookings', this.newBooking).then(res =>{
